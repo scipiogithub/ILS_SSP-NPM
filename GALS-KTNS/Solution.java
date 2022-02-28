@@ -121,7 +121,7 @@ public class Solution {
                     }
                 }
             }
-            suitableMachine.jobs.add(suitableJob);//addJob(suitableJob, newslot, requiredTools);
+            suitableMachine.jobs.add(suitableJob);
             assignedJobs.add(suitableJob);
         }
         for (Machine m : machines) {
@@ -151,11 +151,11 @@ public class Solution {
             } else {
                 for (int j = 0; j < machines[m].jobs.size(); j++) {
                     if (m == m1 && j == j1) {
-                        newSolution.machines[m].jobs.add(machines[m2].jobs.get(j2));//addJob(machines[m2].jobs.get(j2));
+                        newSolution.machines[m].jobs.add(machines[m2].jobs.get(j2));
                     } else if (m == m2 && j == j2) {
-                        newSolution.machines[m].jobs.add(machines[m1].jobs.get(j1));//addJob(machines[m1].jobs.get(j1));
+                        newSolution.machines[m].jobs.add(machines[m1].jobs.get(j1));
                     } else {
-                        newSolution.machines[m].jobs.add(machines[m].jobs.get(j));//addJob(machines[m].jobs.get(j));
+                        newSolution.machines[m].jobs.add(machines[m].jobs.get(j));
                     }
                 }
 
@@ -190,10 +190,10 @@ public class Solution {
             } else {
                 for (int j = 0; j < machines[m].jobs.size(); j++) {
                     if (m == into && j == beforejob) {
-                        newSolution.machines[m].jobs.add(machines[from].jobs.get(job));//addJob(machines[from].jobs.get(job));
-                        newSolution.machines[m].jobs.add(machines[m].jobs.get(j));//addJob(machines[m].jobs.get(j));
+                        newSolution.machines[m].jobs.add(machines[from].jobs.get(job));
+                        newSolution.machines[m].jobs.add(machines[m].jobs.get(j));
                     } else if (m != from || j != job) {
-                        newSolution.machines[m].jobs.add(machines[m].jobs.get(j));//addJob(machines[m].jobs.get(j));
+                        newSolution.machines[m].jobs.add(machines[m].jobs.get(j));
                     }
                 }
             }
@@ -235,11 +235,11 @@ public class Solution {
                 for (int j = 0; j < machines[m].jobs.size(); j++) {
                     if (m == into && j == beforejob) {
                         for (int k = job; k <= tojob; k++) {
-                            newSolution.machines[m].jobs.add(machines[from].jobs.get(k));//addJob(machines[from].jobs.get(k));
+                            newSolution.machines[m].jobs.add(machines[from].jobs.get(k));
                         }
-                        newSolution.machines[m].jobs.add(machines[m].jobs.get(j));//addJob(machines[m].jobs.get(j));
+                        newSolution.machines[m].jobs.add(machines[m].jobs.get(j));
                     } else if (m != from || j < job || j > tojob) {
-                        newSolution.machines[m].jobs.add(machines[m].jobs.get(j));//addJob(machines[m].jobs.get(j));
+                        newSolution.machines[m].jobs.add(machines[m].jobs.get(j));
                     }
                 }
             }
