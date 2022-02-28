@@ -121,8 +121,6 @@ public class Solution {
                     }
                 }
             }
-            //ArrayList<Integer> newslot = (ArrayList<Integer>) bestCost.get(0);
-            //ArrayList<Integer> requiredTools = (ArrayList<Integer>) bestCost.get(1);
             suitableMachine.jobs.add(suitableJob);//addJob(suitableJob, newslot, requiredTools);
             assignedJobs.add(suitableJob);
         }
@@ -171,31 +169,6 @@ public class Solution {
         return newSolution;
     }
 
-    /*public Solution reset(int m1, int j1) {
-        if (OBJECTIVE == FMAX && machines[m1].flowtime < fitness) {
-            for (int m = 0; m < M; m++) {
-                if (machines[m].flowtime == fitness) {
-                    m1 = m;
-                    break;
-                }
-            }
-            j1 = rnd.nextInt(machines[m1].jobs.size());
-        }
-
-        Solution newSolution = new Solution(NONE);
-        for (int m = 0; m < M; m++) {
-            if (m != m1) {
-                newSolution.machines[m] = machines[m].copyAll();
-            } else {
-                newSolution.machines[m] = machines[m].copy(j1);
-                for (int j = j1; j < machines[m].jobs.size(); j++) {
-                    newSolution.machines[m].addJob(machines[m].jobs.get(j));
-                }
-            }
-        }
-        newSolution.setFitness();
-        return newSolution;
-    }*/
 
     public Solution insert(int into, int beforejob, int from, int job) {
         if (OBJECTIVE == FMAX && machines[from].flowtime < fitness) {
@@ -231,7 +204,7 @@ public class Solution {
         return newSolution;
     }
     
-    //group insert
+    //block insert
 
     public Solution insert(int into, int beforejob, int from, int job, int tojob) {
         if (OBJECTIVE == FMAX && machines[from].flowtime < fitness) {
