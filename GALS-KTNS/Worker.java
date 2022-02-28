@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package gals;
 
 import java.util.ArrayList;
@@ -54,7 +50,6 @@ public class Worker implements Runnable {
             for (int j = 0; j < point; j++) {
                 child.machines[m].jobs.add(firstparent.machines[m].jobs.get(j));
             }
-            //child.machines[m] = firstparent.machines[m].copy(point);
             totalassignment += point;
         }
         for (int m = 0; m < M; m++) {
@@ -109,7 +104,6 @@ public class Worker implements Runnable {
             Solution ls = op <= operator[0] ? solution.swap(m1, j1, m2, j2) //: solution.insert(m1, j1, m2, j2)
                     : (op <= operator[1] ? solution.insert(m1, j1, m2, j2)
                             : solution.insert(m1, j1, m2, j2, j3));
-            //: solution.reset(m1, j1)));
             if (ls.fitness < solution.fitness) {
                 counter = 0;
                 solution = ls;
