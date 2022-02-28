@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package gals;
 
 import java.util.ArrayList;
@@ -172,7 +168,6 @@ public class Solution {
                     break;
                 }
             }
-            //j1 = rnd.nextInt(machines[m1].jobs.size());
         }
 
         Solution newSolution = new Solution(NONE);
@@ -222,7 +217,7 @@ public class Solution {
         return newSolution;
     }
     
-    //group insert
+    //block insert
 
     public Solution insert(int into, int beforejob, int from, int job, int tojob) {
         if (OBJECTIVE == FMAX && machines[from].flowtime < fitness) {
