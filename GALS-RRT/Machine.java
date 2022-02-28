@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package gals;
 
 import java.util.ArrayList;
@@ -82,9 +78,6 @@ public class Machine {
     }
     
     private ArrayList<Integer> getProperToolIndexFromSlottobeReplacedForJob(ArrayList<Integer> slot, int j) {
-        /*if (slot.size() < capacity) {
-            return slot.size();
-        }*/
         Job job = jobs.get(j);
         ArrayList<Integer> removable = new ArrayList<>(capacity);
         for (int i = 0; i < slot.size(); i++) {
@@ -182,12 +175,10 @@ public class Machine {
     }
     
     public void addJob(int j, ArrayList<Integer> newslot, ArrayList<Integer> requiredTools) {
-        //int r = requiredTools.size() > 0 ? rnd.nextInt(requiredTools.size()) : 0;
         removedTools.clear();
         ArrayList<Integer> ia = capacity - newslot.size() >= requiredTools.size() ? null : getProperToolIndexFromSlottobeReplacedForJob(newslot, j);
         int ia_index = 0;
         for (int l = 0; l < requiredTools.size(); l++) {
-            //int t = (l + r) % requiredTools.size();
             int i = capacity == newslot.size() ? ia.get(ia_index++) : newslot.size();
 
             if (i == newslot.size()) {
@@ -206,7 +197,6 @@ public class Machine {
         flowtime += jobs.get(j).getProcessingTime(this) + switchtime * n_sw;
         totalflowtime += flowtime;
         flowtimes.add(flowtime);
-        //jobs.add(j);
         slots.add(newslot);
     }
 
