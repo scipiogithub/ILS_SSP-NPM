@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package gals;
 
 import java.util.ArrayList;
@@ -58,7 +54,6 @@ public class Worker {
             Solution ls = op <= operator[0] ? solution.swap(m1, j1, m2, j2) //: solution.insert(m1, j1, m2, j2)
                     : (op <= operator[1] ? solution.insert(m1, j1, m2, j2)
                             : solution.insert(m1, j1, m2, j2, j3));
-            //: solution.reset(m1, j1)));
             if (ls.fitness < solution.fitness) {
                 counter = 0;
                 solution = ls;
