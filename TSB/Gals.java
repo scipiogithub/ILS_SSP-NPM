@@ -23,7 +23,7 @@ public class Gals {
         Solution.OBJECTIVE = Solution.FMAX;
         Solution.iter_limit = 100000;
 
-        String path = "C:\\Users\\tunch\\OneDrive\\Belgeler\\instances\\",
+        String path = "The path to the instances on your computer.",
                 sets[] = {"SSP-NPM-I\\", "SSP-NPM-II\\"};
         int set_no = 0; // Number zero indicates small instances and number one indicates large ones.
         File folder = new File(path + sets[set_no]);
