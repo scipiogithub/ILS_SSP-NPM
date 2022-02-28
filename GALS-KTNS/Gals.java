@@ -20,8 +20,8 @@ public class Gals {
 
     public static void main(String[] args) throws Exception {
 
-        String path = "C:\\Users\\tunch\\OneDrive\\Belgeler\\instances\\",
-                sets[] = {"SSP-NPM-I\\", "SSP-NPM-II\\"};// converging[] = {"ins3_m=2_j=10_t=10_var=3.csv", "ins141_m=3_j=20_t=20_var=1.csv"};
+        String path = "The path to the instances on your computer.",
+                sets[] = {"SSP-NPM-I\\", "SSP-NPM-II\\"};
 
         int set_no = 1; // Number one indicates small instances and number two indicates large ones.
         File folder = new File(path + sets[set_no]);
